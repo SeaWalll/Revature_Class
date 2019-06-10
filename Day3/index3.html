@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me</button><br/>
+    <!-- A node can have only one onclick, so you can 
+        register only one handler per node. -->
+    <button onclick="clickme()">Click Me 2</button>
+    <script>
+        var btn = document.querySelector("button");
+        /*
+        Using addEventListener we can register more handlers
+        per node.
+        */
+        btn.addEventListener('click', () => {
+            console.log("Button clicked");
+        });
+        /*
+        Event listeners are called only when the event 
+        happens in the context of the object they 
+        are registered on.
+        */
+       function clickme() {
+           console.log("Click Me!!!!!");
+       }
+    </script>
+</body>
+</html>

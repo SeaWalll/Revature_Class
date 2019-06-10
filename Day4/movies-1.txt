@@ -1,0 +1,16 @@
+API:
+- url
+- GET/POST/PUT/DELETE/PATCH
+-REquest Parameters
+
+RESPONSE:
+{
+ "title": "Avengers",
+ "actor": ""
+}
+
+or
+[
+{ "movieName":"Avengers"},
+{ "movieName": "Spiderman"}
+]

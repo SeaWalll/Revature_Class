@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>AJAX Example</h3>
+    <button onclick="loadData()">Load the content</button>
+    <p id="demo">
+        <!-- AJAX content should be appended here -->
+        <table id="tbl">
+            <thead><tr><td>Title</td></tr></thead>
+            <tbody id="tblbody">
+
+            </tbody>
+        </table>
+    </p>
+    <script>
+        function loadData() {
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                
+                if( this.readyState === 4 && this.status === 200 ) {                  
+                    display(this);
+                } 
+            }
+            xhr.open("GET", "http://www.omdbapi.com/?t=Avengers&&apikey=5aeb86c3", true);
+            xhr.send();
+            /*
+            Method: GET or POST
+            url: e.g. https://pokeapi.co/api/v2/pokemon/ditto/
+            boolean: asynchronous(true) vs synchronous(false)
+            http://www.omdbapi.com/?t=Avengers&&apikey=5aeb86c3
+            */
+            
+            
+        }
+
+        function display(data) {
+            let dataObj = JSON.parse(data.responseText);
+            for(key in dataObj) {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                td1.innerHTML = key;
+                if(dataObj[key].toString().indexOf( '[object Object]' ) !== -1 ) {
+                    for(key2 in dataObj[key]) {
+                        td2.innerHTML += dataObj[key][key2].Source + ": " 
+                        + dataObj[key][key2].Value + "<br>"; 
+                    }
+                }
+                else { 
+                    td2.innerHTML = dataObj[key];
+                }
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                document.getElementById("tblbody").append(tr);
+            }
+        }
+    </script>
+</body>
+</html>

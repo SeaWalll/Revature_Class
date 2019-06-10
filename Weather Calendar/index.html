@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <link rel="stylesheet" href="WetCal.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Calendar</title>
+</head>
+<body>
+<h2>Weather Calendar</h2> 
+<p>
+    <b>Select a date:</b>
+    <input type="date" name="date" id="date" min="2019-06-07">
+    <br>
+    <b>Select a time:</b>
+    <input type="time" name="time" id="time" min="00:00" max="23:59">
+    <br>
+    <button type="submit" onsubmit="">Submit</button>
+</p>
+<table id="tbl">
+    <thead>
+        <td>Date</td>
+        <td>Data</td>
+        <td>Cleared</td>
+    </thead>
+    <tbody>
+        <tr id="0">
+            <td>Jan 1, 2019</td>
+            <td>Weather Data</td>
+            <td>
+                <input type="checkbox" name="cleared" id="clr" onclick="">
+            </td>
+            <td class="deleteElement">
+                <button onclick="" id="0" name="delete">x</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<script src="WeatherServices.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+

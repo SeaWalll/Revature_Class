@@ -1,0 +1,7 @@
+let users = [
+    {
+        "email": "example@email.com", 
+        "password": "pass"
+    }
+
+];

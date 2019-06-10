@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click Me</button>
+    <script>
+        var btn = document.querySelector("button");
+        btn.addEventListener("mousedown", event => {
+            if( event.button === 0 ) {
+                console.log("Left Button");
+            }
+            else if(event.button === 1) {
+                console.log("Middle Button");
+            }
+            else if (event.button === 2) {
+                console.log("Right Button");
+            }
+            else {
+                console.log("Other Button");
+            }
+        });
+    </script>
+</body>
+
+</html>

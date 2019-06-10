@@ -1,0 +1,2 @@
+What is hoisting?
+Accessing a variable before declaring it.

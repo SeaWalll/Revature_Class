@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Focus Events</h3>
+    Name: <input type="text" name="name" data-help="Your full name"> <br>
+    Age: <input type="text" name="age" data-help="Your age in years"> <br>
+    
+    <p id="help">
+        <!-- Append messages here -->
+    </p>
+    <script>
+        let help = document.querySelector("#help");
+        let fields = document.querySelectorAll("input");
+        for(let field of Array.from(fields)) {
+            field.addEventListener('focus', event => {
+                var msg = event.target.getAttribute("data-help");
+                help.textContent = msg;
+            });
+            field.addEventListener('blur', event => {
+                help.textContent = "";
+            });
+        }
+    </script>
+</body>
+
+</html>

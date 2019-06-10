@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>My Shopping List</h1>
+    <p>Enter a new item:
+        <input type="text" name="item" id="item" />
+        <button onclick="addToList()">Add Item</button>
+        <ol id="ol">
+
+        </ol>
+    </p>
+    <script>
+        let para = document.querySelector("p");
+        let liNum = 0;
+
+        function addToList() {
+            let li = document.createElement("li");
+            let btn = document.createElement("button");
+            let item = document.getElementById("item");
+            let ol = document.getElementById("ol");
+
+
+            btn.innerHTML = "Delete";
+            li.innerHTML = item.value + " ";
+            li.setAttribute("id", liNum.toString());
+            btn.setAttribute("id", "btn"+liNum.toString());
+            
+            btn.addEventListener('click', event => {
+                // 'ol', or 'ordered list', is the parent of every list item, 'li'. 
+                // 'btn' is the child of the relevant list item.
+                // The parent 'ol' must know the id of the relevant list item in order to 
+                // delete both 'btn' and 'li'.
+                // To obtain this information, the id's of 'btn' and 'li' are customized
+                // such that btn's parent's id can be parsed from the id of 'btn'.
+                // This is what the substring accomplishes here. 
+                ol.removeChild(document.getElementById(event.target.id.substring(3)));
+            });
+            liNum++;
+            li.append(btn);
+            ol.appendChild(li);
+        }
+        // div.textContent = "This is my div content";
+        // para.appendChild(div);
+    </script>
+</body>
+
+</html>

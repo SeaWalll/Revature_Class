@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Default Action</h3>
+    <a href="https://www.google.com">Link</a>
+    <script>
+        var link = document.querySelector("a");
+        link.addEventListener("click", event => {
+            console.log('Link Clicked');
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

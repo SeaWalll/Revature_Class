@@ -1,0 +1,8 @@
+.deleteElement {
+    align-items: center;
+    border-style: hidden;  
+}
+#delete {
+    color: whitesmoke;
+    border-color: burlywood;
+}

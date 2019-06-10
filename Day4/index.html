@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>AJAX Example</h3>
+    <button onclick="loadData()">Load the content</button>
+    <p id="demo">
+        <!-- AJAX content should be appended here -->
+        This is my paragraph.
+    </p>
+    <script>
+        function loadData() {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if( this.readyState === 4 && this.status === 200 ) {
+                    console.log(this.responseText);
+                    document.getElementById("demo").innerHTML = this.responseText;
+                } 
+            }
+            /*
+            Method: GET or POST
+            url: e.g. https://pokeapi.co/api/v2/pokemon/ditto/
+            boolean: asynchronous(true) vs synchronous(false)
+            */
+            xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/volcarona/", true);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

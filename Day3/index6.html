@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+    <script>
+        document.body.addEventListener('click', event => {
+            if( event.target.nodeName == "BUTTON") {
+                console.log('Clicked', event.target.textContent);
+            }
+            else {
+                 console.log('Clicked nothing!!!');
+            }
+        });
+    </script>
+</body>
+
+</html>

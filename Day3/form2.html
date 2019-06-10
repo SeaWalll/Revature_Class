@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function addBook() {
+
+            let bookName = document.getElementById("bookName").value;
+            let author = document.getElementById("author").value;
+            let price = document.getElementById("price").value;
+            let category = document.getElementById("category").value;
+
+            if (category === "-") return false;
+            console.log("Adding book");
+            console.log("BookName: " + bookName);
+            console.log("Author: " + author);
+            console.log("Price: " + price);
+            console.log("Category: " + category);
+            
+            let book = new Object()
+            book.bookName = bookName;
+            book.author = author;
+            book.price = price;
+            book.category = category;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Add Book</h3>
+    <form action="#" method="post" onsubmit="return addBook()">
+        <label>Book Name:</label>
+        <input type="text" name="bookName" id="bookName" autofocus />
+        <br>
+        <label>Author:</label>
+        <input type="text" name="author" id="author" required />
+        <br>
+        <label>Price:</label>
+        <input type="text" name="price" id="price" required />
+        <br>
+        <label>Category:</label>
+        <select name="category" id="category">
+            <option value="-" disabled selected>-</option>
+            <option value="Technical">Technical</option>
+            <option value="Story">Story</option>
+            <option value="Book">Book</option>
+            <option value="Manga">Manga</option>
+        </select>
+        <br>
+        <label>Shipping Required:</label>
+        <input type="radio" name="shipping" id="shipping" value="yes">Yes
+        <input type="radio" name="shipping" id="shipping" value="no">No
+        <br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>DOM Manipulation</h3>
+    <p>This is a paragraph. Add a div section dynamically.</p>
+    <script>
+        let para = document.querySelector("p");
+        let div = document.createElement("div");
+        div.textContent = "This is my div content";
+        para.appendChild(div);
+    </script>
+</body>
+
+</html>

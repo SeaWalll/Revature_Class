@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Login</h3>
+    <form>
+        <label>Email: </label>
+        <input type="text" name="email" required autofocus/>
+        <br/>
+        <label>Password: </label>
+        <input type="password" name="password" required/>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Registration</h3>
+    <form id="registration" method="POST">
+        <label>Email: </label>
+        <input type="text" name="email" required autofocus/>
+        <br/>
+        <label>Password: </label>
+        <input type="password" name="password" required/>
+        <br/>
+        <label for="">Zip Code</label>
+        <input type="number" name="zipcode" min="1" max="99999">
+        <br/>
+        <label>Date: </label>
+        <input type="date" name="dob" min="2019-06-03" max="2019-06-15">
+        <br/>
+        <select name="major" placeholder="Pokemon" required>
+            <option value="CS">Computer Science</option>
+            <option value="MECH">Mechanical</option>
+        </select>
+        <br/>
+        <label for="">Address: </label>
+        <br/>
+        <textarea name="address" id="address" cols="30" rows="3"></textarea>
+        <br/>
+        <button type="submit" >Submit</button>
+        <button type="reset">Reset</button>
+        <!-- <button onclick="method();">Submit</button> -->
+    </form>
+</body>
+</html>

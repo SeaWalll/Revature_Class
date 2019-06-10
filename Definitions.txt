@@ -1,0 +1,31 @@
+General:
+1. DRY
+2. 
+
+Javascript: 
+1. Prototypes
+2. Class
+3. Scopes
+4. var
+5. let
+
+HTML: 
+1. 
+
+CSS:
+1. Selector
+2. 
+
+
+AJAX: 
+1.
+
+C#.
+1. Class – A blueprint that is used to define the attributes and capabilities of the objects that we're trying to model.
+2. 
+
+
+
+
+
+

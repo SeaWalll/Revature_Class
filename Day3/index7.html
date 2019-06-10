@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Event Propagation</h3>
+    <p>
+        A paragraph with a button.
+        <button>Click Me</button>
+    </p>
+    <script>
+        var p = document.querySelector("p");
+        p.addEventListener('mousedown', event => {
+            console.log('Paragraph tag clicked');
+        });
+
+        var btn = document.querySelector("button");
+        btn.addEventListener('mousedown', event => {
+            console.log('Button clicked');
+            // '2' refers to Right Click
+            if(event.button === 2) {
+                event.stopPropagation();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+Practice using the string datatype's methods.
+Parsing.
+Create some re-usable methods
+
+var vs let
+var is function scoped and let is block scoped. It can be said that a variable declared with var is defined throughout the program as compared to let.
+
+Scope
+

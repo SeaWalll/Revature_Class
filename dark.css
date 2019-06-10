@@ -1,0 +1,13 @@
+* {
+    background-color: #00000080;
+    color: burlywood;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    background-color: #00000080;
+}
+td {
+    border-style: solid;
+}

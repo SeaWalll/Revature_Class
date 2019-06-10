@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" href="../dark.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Key Events</h3>
+    <p>Paragraph</p>
+    <script>
+        window.addEventListener('keydown', event => {
+            if( event.key === "v") {
+                document.body.style.background = "violet";
+            }
+            else {
+                document.body.style.background = "";
+            }
+        });
+        window.addEventListener('keyup', event => {
+            if( event.key === "v") {
+                document.body.style.background = "";
+            }
+            else {
+                document.body.style.background = "";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
