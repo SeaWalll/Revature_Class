@@ -1,36 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="../dark.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../dark.css"> -->
+  <link rel="stylesheet" href="grey.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
 </head>
+
 <body>
-    <h3>AJAX Example</h3>
-    <button onclick="loadData()">Load the content</button>
-    <p id="demo">
-        <!-- AJAX content should be appended here -->
-        This is my paragraph.
-    </p>
-    <script>
-        function loadData() {
-            let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if( this.readyState === 4 && this.status === 200 ) {
-                    console.log(this.responseText);
-                    document.getElementById("demo").innerHTML = this.responseText;
-                } 
-            }
-            /*
-            Method: GET or POST
-            url: e.g. https://pokeapi.co/api/v2/pokemon/ditto/
-            boolean: asynchronous(true) vs synchronous(false)
-            */
-            xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/volcarona/", true);
-            xhr.send();
-        }
-    </script>
+
+  <span id="loginCred">
+    <h2>Login</h2>
+    <label>Username: </label>
+    <input type="text" name="username" id="username" required>
+    <br>
+    <label>Password: </label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    <button type="submit" onclick="login()">Submit</button>
+    <div>Username: Sincere@april.biz | Password: Leanne Graham</div>
+    <h2 id="invalid" style="color:red"></h2>
+  </span>
+  <span id="searchTag" class="h2" style="visibility: hidden">
+    Movie Search: <br>
+    <input type="search" name="searchBox" id="searchBox" />
+
+    <button type="submit" onclick="search()">Submit</button>
+    <!-- <br>
+        <span class="h5"> 
+            Pokémon
+            <input type="radio" name="pokéRadio" id="pokéRadio" onclick="radioCheck()">
+        </span>
+        <span class="h5">
+            Movies
+            <input type="radio" name="movieRadio" id="movieRadio" onclick="radioCheck()">
+        </span> -->
+
+  </span>
+  <br>
+  <span id="errorTag" class="h3" style="visibility: hidden; color: red">Movie not found!</span>
+  <span id="table" style="visibility: hidden">
+    <h2>Movie Listing</h2>
+    <table id="movieTable" class="table table-hover container">
+      <thead class="row">
+        <tr>
+          <td class="col"><b><i>Field</i></b></td>
+          <td class="col"><b><i>Description</i></b></td>
+      </thead>
+      </tr>
+      <tbody id="tblbody"></tbody>
+    </table>
+  </span>
+  <script src="MovieService.js"></script>
+  <script src="UserService.js"></script>
+  <script src="app.js"></script>
+  <!-- Store an item in local memory. -->
+  <!-- localStorage.setItem("key", obj); -->
+
+  <!-- Get an item from local memory. -->
+  <!-- localStorage.getItem("key"); -->
+  <!-- if getItem is null, item hasn't been put. -->
+
+  <!-- Clear local memory.` -->
+  <!-- localStorage.clear(); -->
 </body>
+
 </html>

@@ -44,9 +44,9 @@ function search() {
 
     // } 
 }
-function radioCheck() {
-    let poke = document.getElementById("pokéRadio");
-    let movi = document.getElementById("movieRadio");
+// function radioCheck() {
+//     let poke = document.getElementById("pokéRadio");
+//     let movi = document.getElementById("movieRadio");
 
-    
-}
+
+// }
