@@ -4,7 +4,7 @@ USE hello;
 CREATE TABLE employees ( 
 	first_name varchar(50), 
 	last_name varchar(50), 
-	department varchar(50), 
+	Department varchar(50), 
 	salary int, 
 	dob date
 	);
@@ -33,13 +33,12 @@ INSERT INTO employees values (
 -- SELECT * FROM employees;
 
 ALTER TABLE employees ADD address varchar(100);
-ALTER TABLE employees DROP department;
+-- ALTER TABLE employees DROP department;
 -- TRUNCATE TABLE employees;
 
 SELECT * FROM employees;
 
-DELETE FROM employees;
-
+-- DELETE FROM employees;
 
 
 
